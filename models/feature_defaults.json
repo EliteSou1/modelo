@@ -1,0 +1,706 @@
+{
+  "modelo_ganador": "LGBMRegressor (Tweedie)",
+  "metricas_test_ganador": {
+    "wape": 14.86,
+    "mae": 9.34,
+    "rmse": 16.89,
+    "r2": 0.9604,
+    "mape_activos": 28.47,
+    "mape_core": 15.85
+  },
+  "sucursales_estados": {
+    "Astoria": "Quintana Roo",
+    "Hell's Kitchen": "Ciudad de México",
+    "Lower Manhattan": "Nuevo León"
+  },
+  "categorias_validas": [
+    "Bakery",
+    "Branded",
+    "Coffee",
+    "Coffee beans",
+    "Drinking Chocolate",
+    "Flavours",
+    "Loose Tea",
+    "Packaged Chocolate",
+    "Tea"
+  ],
+  "series_defaults": {
+    "Astoria||Bakery": {
+      "unidades_lag_1": 57.0,
+      "unidades_lag_2": 61.0,
+      "unidades_lag_3": 40.0,
+      "unidades_lag_7": 69.0,
+      "unidades_lag_14": 58.0,
+      "media_movil_7d": 53.86,
+      "media_movil_14d": 58.86,
+      "media_movil_28d": 58.11,
+      "std_movil_7d": 10.33,
+      "std_movil_14d": 17.48,
+      "dow_defaults": {
+        "0": 56.0,
+        "1": 70.25,
+        "2": 42.5,
+        "3": 71.0,
+        "4": 55.75,
+        "5": 58.75,
+        "6": 52.5
+      }
+    },
+    "Astoria||Branded": {
+      "unidades_lag_1": 2.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 10.0,
+      "media_movil_7d": 0.29,
+      "media_movil_14d": 2.5,
+      "media_movil_28d": 2.46,
+      "std_movil_7d": 0.76,
+      "std_movil_14d": 3.94,
+      "dow_defaults": {
+        "0": 1.75,
+        "1": 0.0,
+        "2": 4.5,
+        "3": 2.5,
+        "4": 1.75,
+        "5": 3.25,
+        "6": 3.5
+      }
+    },
+    "Astoria||Coffee": {
+      "unidades_lag_1": 268.0,
+      "unidades_lag_2": 240.0,
+      "unidades_lag_3": 287.0,
+      "unidades_lag_7": 328.0,
+      "unidades_lag_14": 242.0,
+      "media_movil_7d": 279.14,
+      "media_movil_14d": 248.93,
+      "media_movil_28d": 234.64,
+      "std_movil_7d": 33.76,
+      "std_movil_14d": 53.21,
+      "dow_defaults": {
+        "0": 258.5,
+        "1": 189.5,
+        "2": 199.0,
+        "3": 244.5,
+        "4": 254.0,
+        "5": 264.5,
+        "6": 232.5
+      }
+    },
+    "Astoria||Coffee beans": {
+      "unidades_lag_1": 2.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 5.0,
+      "media_movil_7d": 0.29,
+      "media_movil_14d": 3.64,
+      "media_movil_28d": 4.14,
+      "std_movil_7d": 0.76,
+      "std_movil_14d": 5.34,
+      "dow_defaults": {
+        "0": 5.0,
+        "1": 3.0,
+        "2": 4.5,
+        "3": 6.5,
+        "4": 4.25,
+        "5": 3.0,
+        "6": 2.75
+      }
+    },
+    "Astoria||Drinking Chocolate": {
+      "unidades_lag_1": 39.0,
+      "unidades_lag_2": 64.0,
+      "unidades_lag_3": 39.0,
+      "unidades_lag_7": 64.0,
+      "unidades_lag_14": 41.0,
+      "media_movil_7d": 54.57,
+      "media_movil_14d": 51.29,
+      "media_movil_28d": 48.86,
+      "std_movil_7d": 11.63,
+      "std_movil_14d": 10.92,
+      "dow_defaults": {
+        "0": 50.0,
+        "1": 49.75,
+        "2": 39.75,
+        "3": 53.75,
+        "4": 44.75,
+        "5": 53.25,
+        "6": 50.75
+      }
+    },
+    "Astoria||Flavours": {
+      "unidades_lag_1": 28.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 38.0,
+      "media_movil_7d": 4.0,
+      "media_movil_14d": 15.14,
+      "media_movil_28d": 18.25,
+      "std_movil_7d": 10.58,
+      "std_movil_14d": 18.9,
+      "dow_defaults": {
+        "0": 18.0,
+        "1": 13.0,
+        "2": 19.75,
+        "3": 12.75,
+        "4": 20.25,
+        "5": 23.0,
+        "6": 21.0
+      }
+    },
+    "Astoria||Loose Tea": {
+      "unidades_lag_1": 4.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 4.0,
+      "media_movil_7d": 0.57,
+      "media_movil_14d": 2.29,
+      "media_movil_28d": 2.82,
+      "std_movil_7d": 1.51,
+      "std_movil_14d": 3.15,
+      "dow_defaults": {
+        "0": 3.25,
+        "1": 2.25,
+        "2": 1.5,
+        "3": 3.25,
+        "4": 4.5,
+        "5": 2.0,
+        "6": 3.0
+      }
+    },
+    "Astoria||Packaged Chocolate": {
+      "unidades_lag_1": 0.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 1.0,
+      "media_movil_7d": 0.0,
+      "media_movil_14d": 0.57,
+      "media_movil_28d": 0.68,
+      "std_movil_7d": 0.0,
+      "std_movil_14d": 0.94,
+      "dow_defaults": {
+        "0": 0.75,
+        "1": 0.75,
+        "2": 0.25,
+        "3": 1.25,
+        "4": 0.75,
+        "5": 0.5,
+        "6": 0.5
+      }
+    },
+    "Astoria||Tea": {
+      "unidades_lag_1": 177.0,
+      "unidades_lag_2": 220.0,
+      "unidades_lag_3": 214.0,
+      "unidades_lag_7": 217.0,
+      "unidades_lag_14": 219.0,
+      "media_movil_7d": 210.29,
+      "media_movil_14d": 203.71,
+      "media_movil_28d": 188.89,
+      "std_movil_7d": 15.81,
+      "std_movil_14d": 36.67,
+      "dow_defaults": {
+        "0": 184.75,
+        "1": 162.5,
+        "2": 172.5,
+        "3": 212.75,
+        "4": 184.75,
+        "5": 204.25,
+        "6": 200.75
+      }
+    },
+    "Hell's Kitchen||Bakery": {
+      "unidades_lag_1": 65.0,
+      "unidades_lag_2": 38.0,
+      "unidades_lag_3": 50.0,
+      "unidades_lag_7": 60.0,
+      "unidades_lag_14": 49.0,
+      "media_movil_7d": 56.57,
+      "media_movil_14d": 60.5,
+      "media_movil_28d": 61.32,
+      "std_movil_7d": 15.28,
+      "std_movil_14d": 14.52,
+      "dow_defaults": {
+        "0": 63.75,
+        "1": 48.75,
+        "2": 74.5,
+        "3": 56.5,
+        "4": 67.25,
+        "5": 52.75,
+        "6": 65.75
+      }
+    },
+    "Hell's Kitchen||Branded": {
+      "unidades_lag_1": 0.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 0.0,
+      "media_movil_7d": 0.0,
+      "media_movil_14d": 0.86,
+      "media_movil_28d": 0.96,
+      "std_movil_7d": 0.0,
+      "std_movil_14d": 1.46,
+      "dow_defaults": {
+        "0": 1.25,
+        "1": 0.75,
+        "2": 1.0,
+        "3": 0.75,
+        "4": 0.75,
+        "5": 0.5,
+        "6": 1.75
+      }
+    },
+    "Hell's Kitchen||Coffee": {
+      "unidades_lag_1": 179.0,
+      "unidades_lag_2": 218.0,
+      "unidades_lag_3": 205.0,
+      "unidades_lag_7": 228.0,
+      "unidades_lag_14": 164.0,
+      "media_movil_7d": 220.86,
+      "media_movil_14d": 225.57,
+      "media_movil_28d": 241.11,
+      "std_movil_7d": 23.1,
+      "std_movil_14d": 29.97,
+      "dow_defaults": {
+        "0": 231.75,
+        "1": 271.25,
+        "2": 255.0,
+        "3": 222.25,
+        "4": 239.25,
+        "5": 213.0,
+        "6": 255.25
+      }
+    },
+    "Hell's Kitchen||Coffee beans": {
+      "unidades_lag_1": 13.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 6.0,
+      "unidades_lag_14": 31.0,
+      "media_movil_7d": 4.29,
+      "media_movil_14d": 7.79,
+      "media_movil_28d": 6.86,
+      "std_movil_7d": 4.79,
+      "std_movil_14d": 7.8,
+      "dow_defaults": {
+        "0": 5.75,
+        "1": 4.75,
+        "2": 8.5,
+        "3": 4.0,
+        "4": 9.0,
+        "5": 11.0,
+        "6": 5.0
+      }
+    },
+    "Hell's Kitchen||Drinking Chocolate": {
+      "unidades_lag_1": 31.0,
+      "unidades_lag_2": 30.0,
+      "unidades_lag_3": 58.0,
+      "unidades_lag_7": 51.0,
+      "unidades_lag_14": 20.0,
+      "media_movil_7d": 42.43,
+      "media_movil_14d": 44.79,
+      "media_movil_28d": 45.68,
+      "std_movil_7d": 11.93,
+      "std_movil_14d": 13.94,
+      "dow_defaults": {
+        "0": 43.5,
+        "1": 48.75,
+        "2": 45.5,
+        "3": 45.0,
+        "4": 44.0,
+        "5": 41.0,
+        "6": 52.0
+      }
+    },
+    "Hell's Kitchen||Flavours": {
+      "unidades_lag_1": 40.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 7.0,
+      "unidades_lag_14": 28.0,
+      "media_movil_7d": 18.57,
+      "media_movil_14d": 26.14,
+      "media_movil_28d": 31.39,
+      "std_movil_7d": 21.37,
+      "std_movil_14d": 21.77,
+      "dow_defaults": {
+        "0": 27.75,
+        "1": 42.0,
+        "2": 41.75,
+        "3": 21.75,
+        "4": 39.5,
+        "5": 20.25,
+        "6": 26.75
+      }
+    },
+    "Hell's Kitchen||Loose Tea": {
+      "unidades_lag_1": 3.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 4.0,
+      "unidades_lag_14": 2.0,
+      "media_movil_7d": 3.43,
+      "media_movil_14d": 4.0,
+      "media_movil_28d": 4.36,
+      "std_movil_7d": 3.82,
+      "std_movil_14d": 3.09,
+      "dow_defaults": {
+        "0": 4.75,
+        "1": 3.5,
+        "2": 5.25,
+        "3": 3.5,
+        "4": 4.75,
+        "5": 3.75,
+        "6": 5.0
+      }
+    },
+    "Hell's Kitchen||Packaged Chocolate": {
+      "unidades_lag_1": 5.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 0.0,
+      "unidades_lag_14": 1.0,
+      "media_movil_7d": 1.0,
+      "media_movil_14d": 1.57,
+      "media_movil_28d": 1.86,
+      "std_movil_7d": 1.83,
+      "std_movil_14d": 1.65,
+      "dow_defaults": {
+        "0": 1.0,
+        "1": 1.25,
+        "2": 2.75,
+        "3": 1.75,
+        "4": 2.5,
+        "5": 1.0,
+        "6": 2.75
+      }
+    },
+    "Hell's Kitchen||Tea": {
+      "unidades_lag_1": 142.0,
+      "unidades_lag_2": 134.0,
+      "unidades_lag_3": 146.0,
+      "unidades_lag_7": 155.0,
+      "unidades_lag_14": 102.0,
+      "media_movil_7d": 155.29,
+      "media_movil_14d": 161.71,
+      "media_movil_28d": 177.43,
+      "std_movil_7d": 22.06,
+      "std_movil_14d": 28.63,
+      "dow_defaults": {
+        "0": 193.25,
+        "1": 196.75,
+        "2": 179.25,
+        "3": 159.75,
+        "4": 177.5,
+        "5": 167.25,
+        "6": 168.25
+      }
+    },
+    "Lower Manhattan||Bakery": {
+      "unidades_lag_1": 58.0,
+      "unidades_lag_2": 77.0,
+      "unidades_lag_3": 61.0,
+      "unidades_lag_7": 65.0,
+      "unidades_lag_14": 64.0,
+      "media_movil_7d": 66.14,
+      "media_movil_14d": 64.29,
+      "media_movil_28d": 63.29,
+      "std_movil_7d": 6.96,
+      "std_movil_14d": 10.81,
+      "dow_defaults": {
+        "0": 66.75,
+        "1": 75.25,
+        "2": 65.0,
+        "3": 61.25,
+        "4": 51.5,
+        "5": 64.75,
+        "6": 58.5
+      }
+    },
+    "Lower Manhattan||Branded": {
+      "unidades_lag_1": 4.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 5.0,
+      "unidades_lag_14": 4.0,
+      "media_movil_7d": 3.14,
+      "media_movil_14d": 3.43,
+      "media_movil_28d": 3.54,
+      "std_movil_7d": 2.27,
+      "std_movil_14d": 1.91,
+      "dow_defaults": {
+        "0": 2.25,
+        "1": 2.75,
+        "2": 4.0,
+        "3": 1.5,
+        "4": 8.75,
+        "5": 3.0,
+        "6": 2.5
+      }
+    },
+    "Lower Manhattan||Coffee": {
+      "unidades_lag_1": 198.0,
+      "unidades_lag_2": 186.0,
+      "unidades_lag_3": 242.0,
+      "unidades_lag_7": 245.0,
+      "unidades_lag_14": 214.0,
+      "media_movil_7d": 256.29,
+      "media_movil_14d": 254.43,
+      "media_movil_28d": 236.61,
+      "std_movil_7d": 55.11,
+      "std_movil_14d": 46.46,
+      "dow_defaults": {
+        "0": 237.25,
+        "1": 274.25,
+        "2": 210.5,
+        "3": 232.75,
+        "4": 247.25,
+        "5": 222.5,
+        "6": 231.75
+      }
+    },
+    "Lower Manhattan||Coffee beans": {
+      "unidades_lag_1": 8.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 3.0,
+      "unidades_lag_14": 6.0,
+      "media_movil_7d": 4.29,
+      "media_movil_14d": 4.86,
+      "media_movil_28d": 4.39,
+      "std_movil_7d": 3.4,
+      "std_movil_14d": 2.82,
+      "dow_defaults": {
+        "0": 3.5,
+        "1": 3.75,
+        "2": 3.75,
+        "3": 5.25,
+        "4": 5.25,
+        "5": 4.0,
+        "6": 5.25
+      }
+    },
+    "Lower Manhattan||Drinking Chocolate": {
+      "unidades_lag_1": 44.0,
+      "unidades_lag_2": 30.0,
+      "unidades_lag_3": 36.0,
+      "unidades_lag_7": 55.0,
+      "unidades_lag_14": 31.0,
+      "media_movil_7d": 45.71,
+      "media_movil_14d": 42.5,
+      "media_movil_28d": 41.79,
+      "std_movil_7d": 9.98,
+      "std_movil_14d": 8.56,
+      "dow_defaults": {
+        "0": 45.25,
+        "1": 45.5,
+        "2": 31.25,
+        "3": 41.75,
+        "4": 46.5,
+        "5": 40.5,
+        "6": 41.75
+      }
+    },
+    "Lower Manhattan||Flavours": {
+      "unidades_lag_1": 49.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 47.0,
+      "unidades_lag_14": 61.0,
+      "media_movil_7d": 34.29,
+      "media_movil_14d": 45.5,
+      "media_movil_28d": 40.0,
+      "std_movil_7d": 23.58,
+      "std_movil_14d": 20.26,
+      "dow_defaults": {
+        "0": 45.5,
+        "1": 45.0,
+        "2": 34.75,
+        "3": 36.0,
+        "4": 39.75,
+        "5": 37.75,
+        "6": 41.25
+      }
+    },
+    "Lower Manhattan||Loose Tea": {
+      "unidades_lag_1": 2.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 4.0,
+      "unidades_lag_14": 4.0,
+      "media_movil_7d": 2.14,
+      "media_movil_14d": 3.29,
+      "media_movil_28d": 3.46,
+      "std_movil_7d": 1.68,
+      "std_movil_14d": 2.23,
+      "dow_defaults": {
+        "0": 2.0,
+        "1": 2.75,
+        "2": 3.0,
+        "3": 4.75,
+        "4": 5.5,
+        "5": 2.75,
+        "6": 3.5
+      }
+    },
+    "Lower Manhattan||Packaged Chocolate": {
+      "unidades_lag_1": 3.0,
+      "unidades_lag_2": 0.0,
+      "unidades_lag_3": 0.0,
+      "unidades_lag_7": 2.0,
+      "unidades_lag_14": 0.0,
+      "media_movil_7d": 1.29,
+      "media_movil_14d": 1.29,
+      "media_movil_28d": 1.43,
+      "std_movil_7d": 1.11,
+      "std_movil_14d": 1.2,
+      "dow_defaults": {
+        "0": 1.0,
+        "1": 1.75,
+        "2": 1.25,
+        "3": 1.0,
+        "4": 2.5,
+        "5": 1.0,
+        "6": 1.5
+      }
+    },
+    "Lower Manhattan||Tea": {
+      "unidades_lag_1": 169.0,
+      "unidades_lag_2": 131.0,
+      "unidades_lag_3": 153.0,
+      "unidades_lag_7": 231.0,
+      "unidades_lag_14": 153.0,
+      "media_movil_7d": 195.14,
+      "media_movil_14d": 181.36,
+      "media_movil_28d": 176.54,
+      "std_movil_7d": 44.42,
+      "std_movil_14d": 37.13,
+      "dow_defaults": {
+        "0": 182.25,
+        "1": 199.75,
+        "2": 141.25,
+        "3": 171.0,
+        "4": 160.5,
+        "5": 190.75,
+        "6": 190.25
+      }
+    }
+  },
+  "weather_defaults": {
+    "Ciudad de México||1": {
+      "temp_min": 8.1,
+      "temp_media": 15.4,
+      "temp_max": 22.6,
+      "precipitacion": 0.4
+    },
+    "Ciudad de México||2": {
+      "temp_min": 8.6,
+      "temp_media": 16.5,
+      "temp_max": 24.4,
+      "precipitacion": 0.1
+    },
+    "Ciudad de México||3": {
+      "temp_min": 11.4,
+      "temp_media": 18.8,
+      "temp_max": 26.1,
+      "precipitacion": 21.8
+    },
+    "Ciudad de México||4": {
+      "temp_min": 13.2,
+      "temp_media": 19.7,
+      "temp_max": 26.2,
+      "precipitacion": 10.1
+    },
+    "Ciudad de México||5": {
+      "temp_min": 13.2,
+      "temp_media": 19.9,
+      "temp_max": 26.6,
+      "precipitacion": 43.2
+    },
+    "Ciudad de México||6": {
+      "temp_min": 15.5,
+      "temp_media": 22.2,
+      "temp_max": 28.9,
+      "precipitacion": 28.2
+    },
+    "Nuevo León||1": {
+      "temp_min": 9.4,
+      "temp_media": 17.6,
+      "temp_max": 25.8,
+      "precipitacion": 2.2
+    },
+    "Nuevo León||2": {
+      "temp_min": 9.6,
+      "temp_media": 18.4,
+      "temp_max": 27.1,
+      "precipitacion": 1.2
+    },
+    "Nuevo León||3": {
+      "temp_min": 14.2,
+      "temp_media": 22.3,
+      "temp_max": 30.4,
+      "precipitacion": 23.0
+    },
+    "Nuevo León||4": {
+      "temp_min": 17.7,
+      "temp_media": 23.6,
+      "temp_max": 29.5,
+      "precipitacion": 50.5
+    },
+    "Nuevo León||5": {
+      "temp_min": 19.4,
+      "temp_media": 25.1,
+      "temp_max": 30.7,
+      "precipitacion": 103.5
+    },
+    "Nuevo León||6": {
+      "temp_min": 21.9,
+      "temp_media": 29.7,
+      "temp_max": 37.6,
+      "precipitacion": 15.3
+    },
+    "Quintana Roo||1": {
+      "temp_min": 20.4,
+      "temp_media": 25.2,
+      "temp_max": 30.1,
+      "precipitacion": 98.0
+    },
+    "Quintana Roo||2": {
+      "temp_min": 20.6,
+      "temp_media": 25.7,
+      "temp_max": 30.8,
+      "precipitacion": 23.3
+    },
+    "Quintana Roo||3": {
+      "temp_min": 21.8,
+      "temp_media": 26.9,
+      "temp_max": 32.0,
+      "precipitacion": 47.0
+    },
+    "Quintana Roo||4": {
+      "temp_min": 22.1,
+      "temp_media": 27.6,
+      "temp_max": 33.1,
+      "precipitacion": 29.0
+    },
+    "Quintana Roo||5": {
+      "temp_min": 23.9,
+      "temp_media": 28.9,
+      "temp_max": 34.0,
+      "precipitacion": 109.1
+    },
+    "Quintana Roo||6": {
+      "temp_min": 24.8,
+      "temp_media": 29.7,
+      "temp_max": 34.5,
+      "precipitacion": 97.7
+    }
+  }
+}

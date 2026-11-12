@@ -1,0 +1,30 @@
+[INFO] Ventas cargadas: 149,116 transacciones | Válidas: 149,116 (100.00%) | Unidades totales: 214,470
+[INFO] Matriz diaria completa: 4,887 filas (181 días × 3 sucursales × 9 categorías) | Diferencia de unidades: 0
+[INFO] Cobertura del cruce meteorológico (3 sucursales -> 3 estados MX): 100.0%
+[SUCCESS] Dataset limpio guardado en: data\processed\dataset_limpio.csv | Filas modelables: 4,509 | Columnas: 39 | Nulos: 0
+
+[INFO] Cargando dataset: data\processed\dataset_limpio.csv (4,509 registros)...
+[INFO] Partición cronológica (corte 2023-06-01) | Train: 3,699 muestras (2023-01-15 a 2023-05-31) | Test: 810 muestras (2023-06-01 a 2023-06-30)
+[INFO] Entrenando Exp 1: Ridge L2 (Ridge Regression)...
+[INFO] Entrenando Exp 2: RF Base (Sin poda) (Random Forest Regressor)...
+[INFO] Entrenando Exp 3: RF Regularizado (Random Forest Regressor)...
+[INFO] Entrenando Exp 4: XGBoost Tweedie Reg. (XGBRegressor (Tweedie))...
+[INFO] Entrenando Exp 5: LightGBM Regularizado (L2) (LGBMRegressor (L2))...
+[INFO] Entrenando Exp 6: LightGBM Tweedie Reg. (LGBMRegressor (Tweedie))...
+
+[RESULTADOS EN TEST SET - JUNIO 2023 (810 registros)]
+Experimento                            | WAPE(%) |    MAE |   RMSE |      R2 | MAPE_core% | Train_WAPE% | Tiempo(s)
+-------------------------------------------------------------------------------------------------------------------
+Exp 0: Baseline Naive (Lag-7)          |   26.42 |  16.61 |  28.34 |  0.8884 |      23.52 |       27.81 |     0.000
+Exp 1: Ridge L2                        |   18.74 |  11.79 |  19.32 |  0.9481 |      17.99 |       19.46 |     0.017
+Exp 2: RF Base (Sin poda)              |   16.63 |  10.46 |  19.10 |  0.9493 |      17.47 |        6.66 |     1.046
+Exp 3: RF Regularizado                 |   16.87 |  10.61 |  19.25 |  0.9485 |      17.40 |       11.71 |     0.990
+Exp 4: XGBoost Tweedie Reg.            |   15.00 |   9.43 |  16.93 |  0.9602 |      16.73 |       10.38 |     1.023
+Exp 5: LightGBM Regularizado (L2)      |   16.35 |  10.28 |  17.74 |  0.9563 |      17.96 |       11.25 |     0.391
+Exp 6: LightGBM Tweedie Reg.           |   14.86 |   9.34 |  16.89 |  0.9604 |      15.85 |       10.71 |     0.861
+Exp 7: Ablación sin Clima (LGBMRegressor (Tweedie)) |   14.46 |   9.09 |  16.57 |  0.9618 |      16.24 |       10.66 |     0.681
+
+[GANADOR] Exp 6: LightGBM Tweedie Reg. (LGBMRegressor (Tweedie)) -> Test WAPE=14.86% | MAE=9.34 uds | RMSE=16.89 uds | R2=0.9604 | Mejora relativa vs Baseline: 43.75%
+[SUCCESS] Modelo serializado con éxito en: models\modelo_candidato.joblib
+[SUCCESS] Preprocesador/Escalador guardado en: models\scaler.joblib
+[SUCCESS] Gráficas diagnósticas guardadas en: C:\Users\saulr\.gemini\antigravity\scratch\cafesmart-ai\reports\figures

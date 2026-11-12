@@ -1,0 +1,25 @@
+{
+  "input": {
+    "store_location": "Astoria",
+    "product_category": "Coffee",
+    "fecha": "2023-07-03",
+    "temp_media": 29.5,
+    "precipitacion": 82.0
+  },
+  "output": {
+    "sucursal": "Astoria",
+    "estado_clima": "Quintana Roo",
+    "categoria": "Coffee",
+    "fecha": "2023-07-03",
+    "unidades_estimadas": 239.6,
+    "unidades_recomendadas": 240,
+    "rango_estimado_85": [
+      215,
+      264
+    ],
+    "nivel_demanda": "Demanda Habitual",
+    "modelo_usado": "LGBMRegressor (Tweedie)",
+    "error_esperado_mae": 9.34,
+    "status": "success"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "cutoff_date": "2023-06-01",
+  "train_rows": 3699,
+  "test_rows": 810,
+  "winner_experiment": "Exp 6: LightGBM Tweedie Reg.",
+  "improvement_vs_baseline_pct": 43.75,
+  "weather_delta_wape_pp": -0.4,
+  "experiments": [
+    {
+      "experimento": "Exp 0: Baseline Naive (Lag-7)",
+      "modelo": "Naive Estacional 7d",
+      "hiperparametros": "y_hat(t) = y(t - 7)",
+      "train": {
+        "wape": 27.81,
+        "mae": 11.46,
+        "rmse": 20.03,
+        "r2": 0.8807,
+        "mape_activos": 54.31,
+        "mape_core": 26.79
+      },
+      "test": {
+        "wape": 26.42,
+        "mae": 16.61,
+        "rmse": 28.34,
+        "r2": 0.8884,
+        "mape_activos": 50.7,
+        "mape_core": 23.52
+      },
+      "tiempo_train_s": 0.0001,
+      "tiempo_inf_ms": 0.053,
+      "diagnostico": "Referencia base (sin entrenamiento)",
+      "usa_clima": false
+    },
+    {
+      "experimento": "Exp 1: Ridge L2",
+      "modelo": "Ridge Regression",
+      "hiperparametros": "alpha=10.0",
+      "train": {
+        "wape": 19.46,
+        "mae": 8.02,
+        "rmse": 13.45,
+        "r2": 0.9463,
+        "mape_activos": 45.15,
+        "mape_core": 19.79
+      },
+      "test": {
+        "wape": 18.74,
+        "mae": 11.79,
+        "rmse": 19.32,
+        "r2": 0.9481,
+        "mape_activos": 45.23,
+        "mape_core": 17.99
+      },
+      "tiempo_train_s": 0.017,
+      "tiempo_inf_ms": 0.36,
+      "diagnostico": "Generalización sólida (brecha Train-Test: -0.72 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 2: RF Base (Sin poda)",
+      "modelo": "Random Forest Regressor",
+      "hiperparametros": "n_estimators=200, max_depth=None, min_samples_leaf=1",
+      "train": {
+        "wape": 6.66,
+        "mae": 2.75,
+        "rmse": 4.99,
+        "r2": 0.9926,
+        "mape_activos": 13.45,
+        "mape_core": 7.56
+      },
+      "test": {
+        "wape": 16.63,
+        "mae": 10.46,
+        "rmse": 19.1,
+        "r2": 0.9493,
+        "mape_activos": 30.37,
+        "mape_core": 17.47
+      },
+      "tiempo_train_s": 1.046,
+      "tiempo_inf_ms": 65.36,
+      "diagnostico": "Overfitting moderado/alto (brecha Train-Test: 9.97 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 3: RF Regularizado",
+      "modelo": "Random Forest Regressor",
+      "hiperparametros": "n_estimators=300, max_depth=10, min_samples_leaf=4, max_features=0.8",
+      "train": {
+        "wape": 11.71,
+        "mae": 4.83,
+        "rmse": 8.41,
+        "r2": 0.979,
+        "mape_activos": 27.55,
+        "mape_core": 13.69
+      },
+      "test": {
+        "wape": 16.87,
+        "mae": 10.61,
+        "rmse": 19.25,
+        "r2": 0.9485,
+        "mape_activos": 30.99,
+        "mape_core": 17.4
+      },
+      "tiempo_train_s": 0.99,
+      "tiempo_inf_ms": 108.44,
+      "diagnostico": "Buen ajuste con ligera varianza (brecha: 5.16 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 4: XGBoost Tweedie Reg.",
+      "modelo": "XGBRegressor (Tweedie)",
+      "hiperparametros": "objective=reg:tweedie(1.4), n_estimators=500, max_depth=5, lr=0.03, reg_lambda=2.0",
+      "train": {
+        "wape": 10.38,
+        "mae": 4.28,
+        "rmse": 7.52,
+        "r2": 0.9832,
+        "mape_activos": 21.44,
+        "mape_core": 13.03
+      },
+      "test": {
+        "wape": 15.0,
+        "mae": 9.43,
+        "rmse": 16.93,
+        "r2": 0.9602,
+        "mape_activos": 28.41,
+        "mape_core": 16.73
+      },
+      "tiempo_train_s": 1.023,
+      "tiempo_inf_ms": 3.77,
+      "diagnostico": "Buen ajuste con ligera varianza (brecha: 4.62 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 5: LightGBM Regularizado (L2)",
+      "modelo": "LGBMRegressor (L2)",
+      "hiperparametros": "n_estimators=300, num_leaves=20, max_depth=5, lr=0.05, min_child=15, reg_lambda=2.0",
+      "train": {
+        "wape": 11.25,
+        "mae": 4.64,
+        "rmse": 7.28,
+        "r2": 0.9843,
+        "mape_activos": 30.67,
+        "mape_core": 13.96
+      },
+      "test": {
+        "wape": 16.35,
+        "mae": 10.28,
+        "rmse": 17.74,
+        "r2": 0.9563,
+        "mape_activos": 33.74,
+        "mape_core": 17.96
+      },
+      "tiempo_train_s": 0.391,
+      "tiempo_inf_ms": 4.39,
+      "diagnostico": "Buen ajuste con ligera varianza (brecha: 5.10 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 6: LightGBM Tweedie Reg.",
+      "modelo": "LGBMRegressor (Tweedie)",
+      "hiperparametros": "objective=tweedie(1.4), n_estimators=400, num_leaves=24, max_depth=6, lr=0.04, min_child=15",
+      "train": {
+        "wape": 10.71,
+        "mae": 4.41,
+        "rmse": 7.88,
+        "r2": 0.9816,
+        "mape_activos": 21.45,
+        "mape_core": 13.2
+      },
+      "test": {
+        "wape": 14.86,
+        "mae": 9.34,
+        "rmse": 16.89,
+        "r2": 0.9604,
+        "mape_activos": 28.47,
+        "mape_core": 15.85
+      },
+      "tiempo_train_s": 0.861,
+      "tiempo_inf_ms": 6.12,
+      "diagnostico": "Buen ajuste con ligera varianza (brecha: 4.15 pp)",
+      "usa_clima": true
+    },
+    {
+      "experimento": "Exp 7: Ablación sin Clima (LGBMRegressor (Tweedie))",
+      "modelo": "LGBMRegressor (Tweedie) (Sin Clima)",
+      "hiperparametros": "objective=tweedie(1.4), n_estimators=400, num_leaves=24, max_depth=6, lr=0.04, min_child=15 | sin temp/precipitación",
+      "train": {
+        "wape": 10.66,
+        "mae": 4.39,
+        "rmse": 7.85,
+        "r2": 0.9817,
+        "mape_activos": 21.47,
+        "mape_core": 13.2
+      },
+      "test": {
+        "wape": 14.46,
+        "mae": 9.09,
+        "rmse": 16.57,
+        "r2": 0.9618,
+        "mape_activos": 27.61,
+        "mape_core": 16.24
+      },
+      "tiempo_train_s": 0.681,
+      "tiempo_inf_ms": 5.26,
+      "diagnostico": "Buen ajuste con ligera varianza (brecha: 3.80 pp)",
+      "usa_clima": false
+    }
+  ]
+}
