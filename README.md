@@ -1,10 +1,11 @@
+
 # CaféSmart AI — Sprint 3: Motor de Pronóstico de Demanda
 
 Motor predictivo de demanda diaria por sucursal y categoría de producto, desarrollado para la materia **Fundamentos de Inteligencia Artificial** (Grupo **LITIID 72**, Universidad Tecnológica de Cancún).
 
 ## Equipo
 - **Carlos Daniel Cocom García** — Líder de Datos y Preprocesamiento
-- **Ángel Fernando Ocampo García** — Líder de Modelado y Experimentación
+- **Ángel Fernando Ocampo García 🥺🥺** — Líder de Modelado y Experimentación
 - **Saúl Alejandro Rendón Cocom** — Líder de Pipeline e Integración
 - **Héctor Zavala López** — PM / Validación y Documentación
 
